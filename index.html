@@ -3,27 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css" />
+
     <title>ririsi App</title>
     <link rel="stylesheet" href="./app.css">
 </head>
 
 <body id="bd">
+    
+
     <!-- input의 유효성 검사를 작동 시키기 위해서는 꼭 input이 form 안에 있어야한다. -->
     <form class="hidden" id="login-form">
     <!-- 1. input 태그의 속성들 중 required, maxlength, type 를 사용하여 login-form의 조건을 설정하기 -->
     <!-- JS에서 if,else절을 사용하지 않아도 html에서 간단하게 설정할 수 있다. -->
-    <input required maxlength="15" type="text" placeholder="What is your name?"/>
+    <input class="hi" required maxlength="15" type="text" placeholder="   What is your name?"/>
     <!-- 태그의 required 속성은 폼 데이터(form data)가 서버로 제출되기 전 반드시 채워져 있어야 하는 입력 필드를 명시 -->
-    <input type="submit" value="Log In" >
+    <input class="bnt" type="submit" value="Log In" >
     </form>
     <!-- 이름을 입력할때 조건 만들기 -->
     <!-- 1. 빈칸 없게 입력값 넣기<required> -->
     <!-- 2. 텍스트가 너무 길지 않기<maxlength="15"> -->
     <!-- 3. 숫자가 아닌 텍스트만 입력하기<type="text"> -->
         <h1 class="hidden" id="greeting"></h1>
-    <h2 id="clock">00:00:00</h2>
-
+   
     <div id="weather">
         <span></span>
         <span></span>
@@ -32,10 +33,11 @@
     <form id="todo-form">
         <input
         type="text"
-        placeholder="           Write a To Do and Press Entere 💖" required class="todo-nemo"/>
+        placeholder="                 Write a To Do and Press Entere 💖" required class="todo-nemo"/>
     </form>
+
     <ul id="todo-list"></ul>
-        <span></span>
+        <span> </span>
 
     </ul>
 
@@ -43,6 +45,8 @@
         <span></span>
         <span></span>
     </div>
+
+    <h2 id="clock">00:00:00</h2>
 
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
